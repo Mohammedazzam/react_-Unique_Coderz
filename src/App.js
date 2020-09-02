@@ -4,24 +4,6 @@ import Child from './Child';
 import Items from './components/Items';
 
 
-// class App extends Component {
-
-//     handleChange =(e) =>{
-//         console.log(e.target.value)
-//     }
-
-//     render() {
-//         return ( 
-//             <div className = "App" > 
-//             Forme Part 1
-//                 <form>
-//                     <input type="text" onChange={this.handleChange}/>
-//                     <button>Submit</button>
-//                 </form>
-//             </div>
-//         );
-//     }
-// }
 
 
 
@@ -38,20 +20,25 @@ import Items from './components/Items';
 //         })
 //     }
 
+//     handelSubmit= (e) =>{
+//         e.preventDefault();
+//         console.log(this.state.name)
+        
+//     }
+
 //     render() {
 //         return ( 
 //             <div className = "App" > 
 //             Forme Part 1
-//                 <form>
-//                     <input type="text" onChange={this.handleChange}/>
-//                     <button>Submit</button>
+//                 <form onSubmit={this.handelSubmit}>
+//                     <textarea type="text" onChange={this.handleChange}/>
+//                     <input type="submit" value="send"/>
 //                 </form>
 //                 {this.state.name}
 //             </div>
 //         );
 //     }
 // }
-
 
 
 class App extends Component {
@@ -77,13 +64,18 @@ class App extends Component {
             <div className = "App" > 
             Forme Part 1
                 <form onSubmit={this.handelSubmit}>
-                    <input type="text" onChange={this.handleChange}/>
-                    <button>Submit</button>
+                    <select onChange = {this.handleChange}>
+                        <option value="value1">Value 1</option>
+                        <option value="value2">Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                    <input type="submit" value="send"/>
                 </form>
                 {this.state.name}
             </div>
         );
     }
 }
+
 
 export default App;
