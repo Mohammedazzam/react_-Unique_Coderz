@@ -1,13 +1,12 @@
 import React , { Component} from 'react';
 
-class Child extends Component{
-    render(){
+const Child =(props)=>{
         return(
             <div>
-                Child component
+                {props.test}
             </div>
         )
     }
-}
+
 
 export default Child
