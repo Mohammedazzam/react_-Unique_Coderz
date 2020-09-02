@@ -1,16 +1,37 @@
-import React from 'react';
-// import {Test} from './module'
-// import {Test as x} from './module'
-import Test2 from './module'
+import React, { Component } from 'react';
+
+import Child from './Child';
 
 
-function App() {
-  return (
-    <div className="App">
-      {/* Hello React {x} */}
-      Hello React {Test2}
-    </div>
-  );
+// class App extends Component {
+//     render() {
+//         return ( 
+//             <div className = "App" > 
+//                 <Child />
+//             </div>
+//         );
+//     }
+// }
+
+
+//Arrow Function مفهوم ال 
+class App extends Component {
+    // Test(){
+    //     console.log("Test")
+    // }
+
+    Test = () => {
+        console.log("Test")
+    }
+
+    render(){
+        return(
+            <div className = "App" > 
+                <Child/>
+                {this.Test()}
+            </div>
+        )
+    }
 }
 
 export default App;
