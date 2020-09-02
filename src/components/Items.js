@@ -1,37 +1,35 @@
 import React , {comments, Component} from 'react';
 
-// class Items extends Component{
-//     render(){
 
-//         return(
-//             <div>
-//                 <p>{this.props.id}</p>
-//                 <p>{this.props.name}</p>
-//                 <p>{this.props.age}</p>
-//             </div>
-//         )
-//     }
-// }
+
 
 
 // class Items extends Component{
 //     render(){
-//         const id = this.props.id;
-//         const name = this.props.name;
-//         const age = this.props.age;
+
+//         const {items} = this.props;
+//         // const theItems =items.map( (item) =>{
+//             const theItems =items.map( item =>{
+//                 return(
+//                 <div key={item.id}>
+//                     <p>{item.id}</p>
+//                     <p>{item.name}</p>
+//                     <p>{item.age}</p>
+//                     <div>_____</div>
+//                 </div>
+//             )
+//         })
 //         return(
 //             <div>
-//                 <p>{id}</p>
-//                 <p>{name}</p>
-//                 <p>{age}</p>
+//                 {theItems}
 //             </div>
 //         )
+
 //     }
 // }
 
 
-
-
+//حل آخر لو مافي id
 class Items extends Component{
     render(){
 
@@ -39,10 +37,11 @@ class Items extends Component{
         // const theItems =items.map( (item) =>{
             const theItems =items.map( item =>{
                 return(
-                <div>
+                <div key={Math.random()*10}>
                     <p>{item.id}</p>
                     <p>{item.name}</p>
                     <p>{item.age}</p>
+                    <div>_____</div>
                 </div>
             )
         })
@@ -54,4 +53,7 @@ class Items extends Component{
 
     }
 }
+
+
+
 export default Items;
