@@ -1,9 +1,6 @@
 import React , {comments, Component} from 'react';
 import "./items.css"
 
-
-
-
 class Items extends Component{
     render(){
 
