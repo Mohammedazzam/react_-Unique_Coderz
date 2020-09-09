@@ -10,7 +10,7 @@ const Nav = () => {
                     {/* <Link to="/">Home</Link>
                     <Link to="/about">About</Link> */}
 
-
+{/* {sdewd} */}
                     {/* <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} /> */}
 
