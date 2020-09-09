@@ -7,15 +7,10 @@ const Nav = () => {
             <div className="container">
                 <a href="#" className="logo">Logo</a>
                 <ul>
-                    {/* <Link to="/">Home</Link>
-                    <Link to="/about">About</Link> */}
-
-{/* {sdewd} */}
-                    {/* <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} /> */}
 
                     <NavLink activeClassName="selected" exact to="/">Home</NavLink>
                     <NavLink activeClassName="selected" to="/about">About</NavLink>
+                    <NavLink activeClassName="selected" to="/blog">Blog</NavLink>
                 </ul>
             </div>
         </div>
