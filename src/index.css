@@ -41,3 +41,11 @@ ul a{
   margin: 0 15px;
 }
 
+.active{
+  background-color: red;
+}
+
+.selected{
+  background-color: red;
+
+}
