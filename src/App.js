@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { BrowserRouter, Route } from 'react-router-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import About from './components/About'
 import Home from './components/Home'
@@ -16,10 +16,12 @@ class App extends Component {
             <BrowserRouter>
                 <div className="App">
                     <Nav />
-                    <Route  exact path="/" component={Home} />
-                    <Route  path="/about" component={About} />
-                    <Route  path="/blog" component={Blog} />
-                    <Route path="/:test_params" component={Rout} />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/about" component={About} />
+                        <Route path="/blog" component={Blog} />
+                        <Route path="/:test_params" component={Rout} />
+                    </Switch>
                 </div>
             </BrowserRouter>
         )
