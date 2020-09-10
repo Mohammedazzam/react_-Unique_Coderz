@@ -6,9 +6,8 @@ import About from './components/About'
 import Home from './components/Home'
 import Blog from './components/Blog'
 import Rout from './components/Rout'
-
 import Col from './components/Col'
-
+import theImage from './ch.jpg'
 
 import Nav from './components/Nav';
 
@@ -16,13 +15,9 @@ import Nav from './components/Nav';
 class App extends Component {
     render() {
         return (
-            <table>
-                <tbody>
-                    <tr>
-                        <Col />
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <img src={theImage} className="img" />
+            </div>
         )
     }
 }
