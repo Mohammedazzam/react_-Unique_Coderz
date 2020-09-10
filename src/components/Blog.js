@@ -10,6 +10,10 @@ class Blog extends Component {
     }
 
     componentDidMount() {
+        console.log(this.props)
+        console.log(this.props.match.path)
+
+
         axios.get("https://jsonplaceholder.typicode.com/users")
             .then(res => {
                 console.log(res.data)
