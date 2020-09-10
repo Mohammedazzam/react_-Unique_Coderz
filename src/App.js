@@ -7,23 +7,22 @@ import Home from './components/Home'
 import Blog from './components/Blog'
 import Rout from './components/Rout'
 
+import Col from './components/Col'
+
+
 import Nav from './components/Nav';
 
 
 class App extends Component {
     render() {
         return (
-            <BrowserRouter>
-                <div className="App">
-                    <Nav />
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/about" component={About} />
-                        <Route path="/blog" component={Blog} />
-                        <Route path="/:test_params" component={Rout} />
-                    </Switch>
-                </div>
-            </BrowserRouter>
+            <table>
+                <tbody>
+                    <tr>
+                        <Col />
+                    </tr>
+                </tbody>
+            </table>
         )
     }
 }
