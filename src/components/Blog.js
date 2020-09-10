@@ -1,32 +1,44 @@
-import React , {component, Component} from 'react';
+import React, { component, Component } from 'react';
 import axios from 'axios';
 
-class Blog extends Component{
+class Blog extends Component {
 
-    state={
-        users:[
+    state = {
+        users: [
 
         ]
     }
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(res =>{
-            console.log(res.data)
-            this.setState({
-                users:res.data
+            .then(res => {
+                console.log(res.data)
+                this.setState({
+                    users: res.data
+                })
             })
-        })
     }
 
-    render(){
-        return(
+    render() {
+        const { users } = this.state
+        const userList = users.map(user => {
+            return (
+                <div key={user.id}>
+                    <div className="content">
+                        <div> Name : {user.name}</div>
+                        <div> UserName : {user.username}</div>
+                    </div>
+                </div>
+            )
+        })
+        return (
+
             <div>
                 <h2>Blog</h2>
                 <p>This Is Blog Section</p>
 
                 <div>
-        {this.state.users.map(user => <div>{user.name} and username is{user.username}</div>)}
+                    {userList}
                 </div>
 
             </div>

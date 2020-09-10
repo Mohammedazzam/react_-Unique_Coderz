@@ -49,3 +49,10 @@ ul a{
   background-color: red;
 
 }
+
+.content{
+  background:#eee;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px;
+}
